@@ -5,12 +5,12 @@ import nodeExternals from "webpack-node-externals";
 
 const config = {
   entry: {
-    accounts: path.resolve(__dirname, "src/Main.ts")
+    gcd: path.resolve(__dirname, "src/main.ts")
   },
   module: {
     rules: [
       {
-        test: /\.[tj]sx?$/,
+        test: /\.[tj]s$/,
         include: path.resolve(__dirname, "src"),
         use: {
           loader: "babel-loader"
@@ -38,7 +38,7 @@ const config = {
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
-    new webpack.BannerPlugin("Starshot Software")
+    new webpack.BannerPlugin("Open Sesame")
   ]
 };
 
